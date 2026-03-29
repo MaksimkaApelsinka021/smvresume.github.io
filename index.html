@@ -22,17 +22,20 @@
 
 <div class="container" id="about">
     <aside class="sidebar">
-        <div class="avatar">
+        <figure class="avatar">
             <img src="myfoto.jpg" alt="Шкварок Максим" class="image">
-        </div>
+            <figcaption style="display:none">Фото Шкварока Максима</figcaption>
+        </figure>
 
         <section id="contacts" class="section">
             <h3>Особисті дані</h3>
-            <p><strong>Ім'я:</strong> Максим Шкварок</p>
-            <p><strong>Адреса:</strong> Вул. Неіснуюча Марія, буд. 88, кв. 5, 880 00 Париж</p>
-            <p><strong>Номер телефону:</strong> +38 068 736-87-23</p>
-            <p><strong>Email:</strong> maksym.shkvarok-is2301@kep.nung.edu.ua</p>
-            <p><strong>Дата народження:</strong> 08.01.2007</p>
+            <address>
+                <p><strong>Ім'я:</strong> Максим Шкварок</p>
+                <p><strong>Адреса:</strong> Вул. Неіснуюча Марія, буд. 88, кв. 5, 880 00 Париж</p>
+                <p><strong>Номер телефону:</strong> +38 068 736-87-23</p>
+                <p><strong>Email:</strong> maksym.shkvarok-is2301@kep.nung.edu.ua</p>
+                <p><strong>Дата народження:</strong> <time datetime="2007-01-08">08.01.2007</time></p>
+            </address>
         </section>  
 
         <section class="section">
@@ -60,37 +63,37 @@
         <section id="experience">
             <h2 class="section-title">Досвід роботи</h2>
             
-            <div class="job-item">
-                <div class="job-header">
+            <article class="job-item">
+                <header class="job-header">
                     <strong>Виробництво харчових добавок</strong>
-                    <span class="date">квіт 2025 — теп. час</span>
-                </div>
+                    <span class="date"><time datetime="2025-04">квіт 2025</time> — теп. час</span>
+                </header>
                 <p class="job-desc">Очищення капсул від залишків порошку за допомогою спеціалізованого верстата.</p>
-            </div>
+            </article>
 
-            <div class="job-item">
-                <div class="job-header">
+            <article class="job-item">
+                <header class="job-header">
                     <strong>TEIJIN AUTOMOTIVE TECHNOLOGIES CZECH</strong>
-                    <span class="date">січ 2025 — січ 2025</span>
-                </div>
-                <p class="job-desc">Оператор виробництва: налаштування та контроль роботи роботизованого маніпулятора для прецизійної обрізки карбонових елементів автомобільних деталей.</p>
-            </div>
+                    <span class="date"><time datetime="2025-01">січ 2025</time> — <time datetime="2025-01">січ 2025</time></span>
+                </header>
+                <p class="job-desc">Оператор виробництва: налаштування та контроль роботи роботизованого маніпулятора.</p>
+            </article>
 
-            <div class="job-item">
-                <div class="job-header">
+            <article class="job-item">
+                <header class="job-header">
                     <strong>Пошта Zasilkovna</strong>
-                    <span class="date">лист 2024 — січ 2025</span>
-                </div>
-                <p class="job-desc">Сортування, пакування та завантаження відправлень; підготовка та склеювання пакувальної тари для транспортування.</p>
-            </div>
+                    <span class="date"><time datetime="2024-11">лист 2024</time> — <time datetime="2025-01">січ 2025</time></span>
+                </header>
+                <p class="job-desc">Сортування, пакування та завантаження відправлень.</p>
+            </article>
 
-            <div class="job-item">
-                <div class="job-header">
+            <article class="job-item">
+                <header class="job-header">
                     <strong>Фріланс (Розробка сайтів-візиток)</strong>
                     <span class="date">Періодично</span>
-                </div>
+                </header>
                 <p class="job-desc">Проєктування та розробка веб-інтерфейсів для бізнесу.</p>
-            </div>
+            </article>
         </section>
 
         <section id="education">
@@ -112,8 +115,7 @@
                 <li>Програмування:
                     <ul>
                         <li>Python, C++, C# (Unity)</li>
-                        <li>HTML, CSS</li>
-                    </ul>
+                        <li><mark>HTML, CSS</mark></li> </ul>
                 </li>
                 <li>Графіка та 3D:
                     <ul>
@@ -125,7 +127,7 @@
             </ul>
         </section>
 
-        <section class="html-structure">
+        <footer class="html-structure">
             <h2 class="section-title">Структура HTML документа</h2>
             <code>
                 &lt;!DOCTYPE html&gt;<br>
@@ -138,19 +140,20 @@
                 &nbsp;&nbsp;&lt;/body&gt;<br>
                 &lt;/html&gt;
             </code>
-        </section>
+        </footer>
 
         <section id="portfolio">
             <h2 class="section-title">Портфоліо</h2>
-            <div class="portfolio-grid">
-                <a href="https://drive.google.com/file/d/1KdS_fn8WjKdSN1jcQYdI1DfzHHRG9I4r/view?usp=sharing" class="portfolio-button">Лабораторна робота №1</a>
-                <a href="" class="portfolio-button">Лабораторна робота №2</a>
-                <a href="" class="portfolio-button">Лабораторна робота №3</a>
-                <a href="" class="portfolio-button">Лабораторна робота №4</a>
-            </div>
+            <nav class="portfolio-grid">
+                <a href="lab1/index.html" class="portfolio-button">Лабораторна робота №1</a>
+                <a href="lab2/index.html" class="portfolio-button">Лабораторна робота №2</a>
+                <a href="lab3/index.html" class="portfolio-button">Лабораторна робота №3</a>
+                <a href="lab4/index.html" class="portfolio-button">Лабораторна робота №4</a>
+            </nav>
         </section>
     </main>
 </div>
 
 </body>
 </html>
+
