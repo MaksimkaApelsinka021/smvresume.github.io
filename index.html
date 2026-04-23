@@ -3,157 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Резюме — Шкварок Максим</title>
+    <title>Каталог Нерухомості — Івано-Франківськ</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-    <nav>
-        <ul class="nav-menu">
-            <li><a href="#about">Головна</a></li>
-            <li><a href="#experience">Досвід</a></li>
-            <li><a href="#portfolio">Портфоліо</a></li> 
-            <li><a href="#skills">Навички</a></li>
-            <li><a href="#contacts">Контакти</a></li>
-        </ul>
-    </nav>
-</header>
+    <div class="wrap">
+        <div class="swipe swipe_left" aria-label="Попередній">&lt;</div>
+        <div class="swipe swipe_right" aria-label="Наступний">&gt;</div>
 
-<div class="container" id="about">
-    <aside class="sidebar">
-        <figure class="avatar">
-            <img src="myfoto.jpg" alt="Шкварок Максим" class="image">
-            <figcaption style="display:none">Фото Шкварока Максима</figcaption>
-        </figure>
-
-        <section id="contacts" class="section">
-            <h3>Особисті дані</h3>
-            <address>
-                <p><strong>Ім'я:</strong> Максим Шкварок</p>
-                <p><strong>Адреса:</strong> Вул. Неіснуюча Марія, буд. 88, кв. 5, 880 00 Париж</p>
-                <p><strong>Номер телефону:</strong> +38 068 736-87-23</p>
-                <p><strong>Email:</strong> maksym.shkvarok-is2301@kep.nung.edu.ua</p>
-                <p><strong>Дата народження:</strong> <time datetime="2007-01-08">08.01.2007</time></p>
-            </address>
-        </section>  
-
-        <section class="section">
-            <h3>Інтереси</h3>
-            <ul class="interests-list">
-                <li>Відеоігри</li>
-                <li>Картинг</li>
-                <li>Читання</li>
-            </ul>
-        </section>
-
-        <section class="section">
-            <h3>Мови</h3>
-            <ul class="languages-list">
-                <li>Англійська — Нижче середнього</li>
-                <li>Чеська — Нижче середнього</li>
-                <li>Українська — Рідна</li>
-            </ul>
-        </section>
-    </aside>
-
-    <main class="main-content">
-        <h1>Шкварок Максим</h1>
-
-        <section id="experience">
-            <h2 class="section-title">Досвід роботи</h2>
+        <div class="catalog">
             
-            <article class="job-item">
-                <header class="job-header">
-                    <strong>Виробництво харчових добавок</strong>
-                    <span class="date"><time datetime="2025-04">квіт 2025</time> — теп. час</span>
-                </header>
-                <p class="job-desc">Очищення капсул від залишків порошку за допомогою спеціалізованого верстата.</p>
+            <article class="item">
+                <div class="badge badge-green">НОВИНКА</div>
+                
+                <div class="category">
+                    <a href="#" title="Переглянути всі квартири">КВАРТИРИ</a>
+                </div>
+
+                <a href="https://lun.ua/realty/4129393530" class="item-image-link" title="Детальніше про квартиру">
+                    <img src="apartment.png" alt="Фото квартири" loading="lazy">
+                </a>
+
+                <h3 class="item-title">
+                    <a href="https://lun.ua/realty/4129393530" title="Двокімнатна квартира">Двокімнатна квартира</a>
+                </h3>
+
+                <div class="item-price">
+                    <span class="new-price"></span>
+                </div>
+
+                <div class="item-action">
+                    <button class="btn btn-disabled" disabled>НЕЗАБАРОМ У ПРОДАЖІ</button>
+                </div>
             </article>
 
-            <article class="job-item">
-                <header class="job-header">
-                    <strong>TEIJIN AUTOMOTIVE TECHNOLOGIES CZECH</strong>
-                    <span class="date"><time datetime="2025-01">січ 2025</time> — <time datetime="2025-01">січ 2025</time></span>
-                </header>
-                <p class="job-desc">Оператор виробництва: налаштування та контроль роботи роботизованого маніпулятора.</p>
+            <article class="item">
+                <div class="category">
+                    <a href="https://lun.ua/realty/3339868031" title="Переглянути всі земляні ділянки">ЗЕМЛЯНІ ДІЛЯНКИ</a>
+                </div>
+
+                <a href="https://lun.ua/realty/3339868031" class="item-image-link" title="Детальніше про земляну ділянку">
+                    <img src="area.png" alt="Фото ділянки" loading="lazy">
+                </a>
+
+                <h3 class="item-title">
+                    <a href="https://lun.ua/realty/3339868031">Земельна ділянка в Клузові</a>
+                </h3>
+
+                <div class="item-price">
+                    <span class="new-price">1 481 842 грн</span>
+                </div>
+
+                <div class="item-action">
+                    <a href="#" class="btn btn-yellow">ПЕР  ЕГЛЯНУТИ</a>
+                </div>
             </article>
 
-            <article class="job-item">
-                <header class="job-header">
-                    <strong>Пошта Zasilkovna</strong>
-                    <span class="date"><time datetime="2024-11">лист 2024</time> — <time datetime="2025-01">січ 2025</time></span>
-                </header>
-                <p class="job-desc">Сортування, пакування та завантаження відправлень.</p>
+            <article class="item">
+                <div class="badge badge-blue">ПОПУЛЯРНЕ</div>
+                
+                <div class="category">
+                    <a href="https://lun.ua/realty/4219353132" title="Переглянути всі будинки">БУДИНКИ</a>
+                </div>
+
+                <a href="https://lun.ua/realty/4219353132" class="item-image-link">
+                    <img src="house.png" alt="Фото будинку" loading="lazy">
+                </a>
+
+                <h3 class="item-title">
+                    <a href="https://lun.ua/realty/4219353132">Будинок у затишній локації поблизу міста</a>
+                </h3>
+
+                <div class="item-price">
+                    <span class="new-price">10 173 843 грн</span>
+                </div>
+
+                <div class="item-action">
+                    <a href="#" class="btn btn-yellow">ПЕРЕГЛЯНУТИ</a>
+                </div>
             </article>
 
-            <article class="job-item">
-                <header class="job-header">
-                    <strong>Фріланс (Розробка сайтів-візиток)</strong>
-                    <span class="date">Періодично</span>
-                </header>
-                <p class="job-desc">Проєктування та розробка веб-інтерфейсів для бізнесу.</p>
+            <article class="item">
+                <div class="badge badge-blue">ПОПУЛЯРНЕ</div>
+                
+                <div class="category">
+                    <a href="https://lun.ua/realty/1669580162" title="Комерційна нерухомість">КОМЕРЦІЯ</a>
+                </div>
+
+                <a href="https://lun.ua/realty/1669580162" class="item-image-link">
+                    <img src="komercia.png" alt="Фото офісу" loading="lazy">
+                </a>
+
+                <h3 class="item-title">
+                    <a href="https://lun.ua/realty/1669580162">Продаж нежитлового приміщення в центральній частині міста</a>
+                </h3>
+
+                <div class="item-price">
+                    <span class="old-price">4 644 581 грн</span>
+                    <span class="new-price">5 308 092 грн</span>
+                </div>
+
+                <div class="item-action">
+                    <a href="https://lun.ua/realty/1669580162" class="btn btn-yellow">ПЕРЕГЛЯНУТИ</a>
+                </div>
             </article>
-        </section>
 
-        <section id="education">
-            <h2 class="section-title">Освіта</h2>
-            <p><strong>Базова середня освіта</strong><br>
-            <span class="edu-italic">Ліцей №12 ім. Івана Франка, Івано-Франківськ</span></p>
-            <p><strong>Повна середня освіта</strong><br>
-            <span class="edu-italic">ВСП ФКЕП Івано-Франківського національного технічного університету нафти і газу</span></p>
-        </section>
-
-        <section id="courses">
-            <h2 class="section-title">Курси</h2>
-            <p><strong>Молодша академія IT STEP</strong> (2019 — 2024)</p>
-        </section>
-
-        <section id="skills">
-            <h2 class="section-title">Навички</h2>
-            <ul class="skills-grid">
-                <li>Програмування:
-                    <ul>
-                        <li>Python, C++, C# (Unity)</li>
-                        <li><mark>HTML, CSS</mark></li> </ul>
-                </li>
-                <li>Графіка та 3D:
-                    <ul>
-                        <li>Adobe (Photoshop, Premiere Pro, After Effects)</li>
-                        <li>Blender, SketchUp</li>
-                    </ul>
-                </li>
-                <li>Залізо: Arduino</li>
-            </ul>
-        </section>
-
-        <footer class="html-structure">
-            <h2 class="section-title">Структура HTML документа</h2>
-            <code>
-                &lt;!DOCTYPE html&gt;<br>
-                &lt;html&gt;<br>
-                &nbsp;&nbsp;&lt;head&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Page Title&lt;/title&gt;<br>
-                &nbsp;&nbsp;&lt;/head&gt;<br>
-                &nbsp;&nbsp;&lt;body&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Hello World&lt;/h1&gt;<br>
-                &nbsp;&nbsp;&lt;/body&gt;<br>
-                &lt;/html&gt;
-            </code>
-        </footer>
-
-        <section id="portfolio">
-            <h2 class="section-title">Портфоліо</h2>
-            <nav class="portfolio-grid">
-                <a href="https://drive.google.com/file/d/1KdS_fn8WjKdSN1jcQYdI1DfzHHRG9I4r/view?usp=sharing" class="portfolio-button">Лабораторна робота №1</a>
-                <a href="lab2/index.html" class="portfolio-button">Лабораторна робота №2</a>
-                <a href="lab3/index.html" class="portfolio-button">Лабораторна робота №3</a>
-                <a href="lab4/index.html" class="portfolio-button">Лабораторна робота №4</a>
-            </nav>
-        </section>
-    </main>
-</div>
+        </div>
+    </div>
 
 </body>
 </html>
-
