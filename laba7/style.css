@@ -1,0 +1,190 @@
+/* --- ЗМІННІ (ПАЛІТРА ТА НАЛАШТУВАННЯ) --- */
+:root {
+    --primary-blue: #00a8df;
+    --accent-pink: #c82898;
+    --btn-color: #ffde17;
+    --badge-green: #8cc63f;
+    --main-text: #333;
+    --muted-text: #888;
+    --border-gray: #eee;
+    --white: #fff;
+    --transition: 0.3s ease;
+}
+
+/* Обгортка слайдера */
+.wrap {
+    max-width: 1000px; 
+    margin: 60px auto;
+    position: relative;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Контейнер каталогу */
+.catalog {
+    display: flex;
+    border: 1px solid var(--border-gray);
+    background: var(--white);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Картка товару (5 логічних частин) */
+.item {
+    flex: 1;
+    text-align: center;
+    padding: 45px 20px;
+    border-right: 1px solid var(--border-gray);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Рівномірне розтягування блоків */
+}
+
+.item:last-child {
+    border-right: none;
+}
+
+/* 1. Категорія */
+.category {
+    margin-bottom: 20px;
+    padding-bottom: 15px; /* Відступ від тексту до лінії */
+    border-bottom: 1px solid var(--border-gray); /* Сама горизонтальна лінія */
+    width: 100%; /* Щоб лінія тягнулася на всю ширину картки */
+}
+
+.category a {
+    text-decoration: none;
+    color: var(--primary-blue);
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+
+.category a:hover {
+    color: var(--accent-pink);
+}
+
+/* 2. Зображення */
+.item-image-link {
+    display: block;
+    margin: 15px auto;
+    transition: transform var(--transition);
+}
+.item-image-link:hover {
+    transform: scale(1.05);
+}
+
+.item-image-link img {
+    width: 100%;        /* Картинка розтягується на всю доступну ширину колонки */
+    height: 200px;      /* Фіксована висота для ВСІХ картинок (можеш змінити на 180px чи 250px за смаком) */
+    object-fit: cover;  /* Головна магія: обрізає зайве, не спотворюючи пропорції */
+    border-radius: 4px; /* Опціонально: робить кути трохи заокругленими для краси */
+    object-position: center; /* Центрує картинку, якщо вона обрізається */
+}
+
+/* 3. Назва товару */
+.item-title {
+    margin: 0 0 15px 0;
+    font-size: 15px;
+    min-height: 44px; /* Резерв для двох рядків */
+}
+.item-title a {
+    text-decoration: none;
+    color: var(--main-text);
+}
+.item-title a:hover {
+    color: var(--primary-blue);
+}
+
+/* 4. Блок ціни та статусу */
+.item-price, .item-status {
+    margin-bottom: 20px;
+    min-height: 42px;
+}
+.old-price {
+    display: block;
+    text-decoration: line-through;
+    color: var(--muted-text);
+    font-size: 13px;
+}
+.new-price {
+    display: block;
+    color: var(--main-text);
+    font-weight: bold;
+    font-size: 17px;
+}
+
+/* 5. Кнопка дії */
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 2px;
+    font-size: 12px;
+    border: none;
+    font-family: inherit;
+    text-transform: uppercase;
+}
+
+.btn-yellow {
+    background: var(--btn-color);
+    color: var(--main-text);
+    cursor: pointer;
+    transition: background var(--transition);
+}
+.btn-yellow:hover {
+    background: #ecd115;
+}
+
+.btn-disabled {
+    background: #f5f5f5;
+    color: #bbb;
+    cursor: not-allowed;
+}
+
+/* Стрілочки слайдера */
+.swipe {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    background: var(--white);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ccc;
+    font-weight: bold;
+    z-index: 10;
+    transition: all var(--transition);
+}
+.swipe:hover {
+    border-color: var(--muted-text);
+    color: var(--muted-text);
+}
+.swipe_left { left: -22px; }
+.swipe_right { right: -22px; }
+
+.badge {
+    position: absolute;
+    top: -25px;
+    right: 20px; /* Зміщуємо бейдж у правий бік (можеш змінювати цифру, щоб посунути лівіше чи правіше) */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 9px;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+    z-index: 2; /* Щоб бейдж завжди був поверх інших елементів */
+}
+.badge-green { background: var(--badge-green); }
+.badge-blue { background: var(--primary-blue); }
